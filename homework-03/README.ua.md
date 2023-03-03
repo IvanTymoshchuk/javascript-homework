@@ -1,4 +1,3 @@
-**Читать на других языках: [Русский](README.md), [Українська](README.ua.md).**
 
 # Критерії прийому
 
@@ -248,4 +247,4 @@ const account = {
    */
   getTransactionTotal(type) {},
 };
-```
+

@@ -8,18 +8,17 @@
 // `['Mango', 'Poly', 'Ajax']` з індексом `0` буде виведено `'1 - Mango'`, а для
 // індексу `2` виведе `'3 - Ajax'`.
 
-// ```js
-// const logItems = function (array) {
-//   // твій код
-// };
+// * РІШЕННЯ
 
-// /*
-//  * Виклич функції для перевірки працездатності твоєї реалізації.
-//  */
+// function logItems(array) {
+//     for (let i = 0; i < array.length; i += 1) {
+//       console.log(`${i + 1} - ${array[i]}`);
+//     }
+//   }
+
 // logItems(['Mango', 'Poly', 'Ajax', 'Lux', 'Jay', 'Kong']);
-
 // logItems([5, 10, 15, 20, 25, 30, 35, 40, 45, 50]);
-// ```
+
 
 //? Завдання 2
 
@@ -28,10 +27,18 @@
 // тільки слова і прогалини) і ціну гравіювання одного слова, і повертає ціну
 // гравіювання всіх слів в рядку.
 
-// ```js
-// const calculateEngravingPrice = function (message, pricePerWord) {
-//   // твій код
-// };
+//* РІШЕННЯ
+
+// function calculateEngravingPrice(message, pricePerWord) {
+//     // Розбиваємо рядок на масив слів
+//     const words = message.split(" ");
+//     // Рахуємо кількість слів
+//     const wordCount = words.length;
+//     // Обчислюємо вартість гравіювання
+//     const totalPrice = wordCount * pricePerWord;
+//     // Повертаємо вартість гравіювання
+//     return totalPrice;
+//   }
 
 // /*
 //  * Виклич функції для перевірки працездатності твоєї реалізації.
@@ -57,7 +64,7 @@
 // console.log(
 //   calculateEngravingPrice('Donec orci lectus aliquam est magnis', 20),
 // ); // 120
-// ```
+
 
 //? Завдання 3
 
@@ -65,9 +72,9 @@
 // (в рядку будуть тільки слова і прогалини) і повертає найдовше слово в цьому
 // рядку.
 
-// ```js
+
 // const findLongestWord = function (string) {
-//   // твій код
+//     return string.split(" ").reduce((a,b) => (b.length > a.length) ? b : a);
 // };
 
 // /*
@@ -78,7 +85,7 @@
 // console.log(findLongestWord('Google do a roll')); // 'Google'
 
 // console.log(findLongestWord('May the force be with you')); // 'force'
-// ```
+
 
 //? Завдання 4
 
@@ -91,10 +98,15 @@
 //   і додає в кінець рядка три крапки `'...'`, після чого повертає   укорочену
 //   версію.
 
-// ```js
-// const formatString = function (string) {
-//   // твій код
-// };
+//* РІШЕННЯ
+// function formatString(string) {
+//   if (string.length <= 40) {
+//     return string;
+//   } else {
+//     return string.slice(0, 40) + '...';
+//   }
+// }
+
 
 // /*
 //  * Виклич функції для перевірки працездатності твоєї реалізації.
@@ -114,7 +126,7 @@
 //   ),
 // );
 // // повернеться форматований рядок
-// ```
+
 
 //? Завдання 5
 
@@ -123,9 +135,13 @@
 // слово, то функція повертає `true`, якщо заборонених слів немає функція повертає
 // `false`. Слова в рядку можуть бути в довільному регістрі.
 
-// ```js
+//* РІШЕННЯ
+
 // const checkForSpam = function (message) {
-//   // твій код
+//     let result;
+//     message = message.toLowerCase();
+//   result = message.includes("spam") || message.includes("sale");
+//     return result;
 // };
 
 // /*
@@ -138,7 +154,7 @@
 // console.log(checkForSpam('Get best sale offers now!')); // true
 
 // console.log(checkForSpam('[SPAM] How to earn fast money?')); // true
-// ```
+
 
 //? Завдання 6
 
@@ -146,8 +162,8 @@
 
 // - При завантаженні сторінки користувачеві пропонується в `prompt` ввести число.
 //   Введення зберігається в змінну `input` і додається в масив чисел `numbers`.
-// - Операція введення числа користувачем і збереження в масив триває до тих пор,
-//   пір, поки користувач не натисне `Cancel` в `prompt`.
+// - Операція введення числа користувачем і збереження в масив триває до тих пір,
+//   поки користувач не натисне `Cancel` в `prompt`.
 // - Після того як користувач припинив введення натиснувши `Cancel`, якщо масив не
 //   порожній, необхідно порахувати суму всіх елементів масиву і записати її в
 //   змінну `total`. Використовуй цикл `for` або `for...of`. Після чого в консоль
@@ -236,3 +252,4 @@
 // console.log(addLogin(logins, 'Zod')); // 'Помилка! Логін повинен бути від 4 до 16 символів'
 // console.log(addLogin(logins, 'jqueryisextremelyfast')); // 'Помилка! Логін повинен бути від 4 до 16 символів'
 // ```
+

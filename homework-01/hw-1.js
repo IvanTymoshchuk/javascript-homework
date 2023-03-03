@@ -61,18 +61,18 @@
 // const ADMIN_PASSWORD = 'jqueryismyjam';
 // let message;
 
-//     const loginInput = prompt("Hello, please enter your password!");
-//         if (loginInput) {
-//             if (ADMIN_PASSWORD === 'jqueryismyjam') {
-//                 message = `'Ласкаво просимо!'`;
+    // const loginInput = prompt("Hello, please enter your password!");
+    //     if (loginInput) {
+    //         if (ADMIN_PASSWORD === 'jqueryismyjam') {
+    //             message = `'Ласкаво просимо!'`;
     
-//             } else {
-//                 message = `'Скасовано користувачем!'`;
-//             }
+    //         } else {
+    //             message = `'Скасовано користувачем!'`;
+    //         }
     
-//         } else {
-//             message = `'Доступ заборонений, невірний пароль!'`;
-//         }  
+    //     } else {
+    //         message = `'Доступ заборонений, невірний пароль!'`;
+    //     }  
 
 //! Завдання 4
 
@@ -96,6 +96,7 @@
 //   - в іншому випадку необхідно порахувати залишок кредитів на рахунку і вивести
 //     повідомлення
 //     `'Ви купили [число] дроїдів, на рахунку залишилося [число] кредитів.'`.
+
 
 //! Завдання 5
 
